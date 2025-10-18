@@ -30,6 +30,8 @@ docker run -d -p 8080:80 macmati-app
 
 Luego accedé desde tu navegador a: http://localhost:8080
 
+<img width="1470" height="690" alt="image" src="https://github.com/user-attachments/assets/f5c278f5-c32e-4588-9f7b-7897e31d74b3" />
+
 ---
 
 ## 👨‍💻 Autor
