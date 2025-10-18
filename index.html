@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacMati - Hamburguesas Artesanales</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">M</span>
+            <span class="logo-text">MacMati</span>
+        </div>
+        <button class="burger-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><button id="currency-toggle" class="currency-btn">Mostrar en ARS</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1>MacMati</h1>
+            <p class="subtitle">Hamburguesas artesanales de calidad</p>
+        </header>
+
+        <section class="burgers">
+            <article class="burger">
+                <div class="burger-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop"
+                        alt="MacMati Clásica">
+                </div>
+                <div class="burger-content">
+                    <h2>MacMati Clásica</h2>
+                    <p class="description">Carne 100% de res, lechuga fresca, tomate, cebolla y aderezo especial</p>
+                    <p class="price" data-usd="8">$8 USD</p>
+                </div>
+            </article>
+
+            <article class="burger">
+                <div class="burger-image">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=300&fit=crop"
+                        alt="MacMati BBQ">
+                </div>
+                <div class="burger-content">
+                    <h2>MacMati BBQ</h2>
+                    <p class="description">Carne de res, bacon crocante, cebolla caramelizada y salsa BBQ casera</p>
+                    <p class="price" data-usd="12">$12 USD</p>
+                </div>
+            </article>
+
+            <article class="burger">
+                <div class="burger-image">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop"
+                        alt="MacMati Premium">
+                </div>
+                <div class="burger-content">
+                    <h2>MacMati Premium</h2>
+                    <p class="description">Doble carne, queso cheddar, bacon, hongos y salsa especial de la casa</p>
+                    <p class="price" data-usd="15">$15 USD</p>
+                </div>
+            </article>
+        </section>
+
+        <div id="status-message" class="status-message"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

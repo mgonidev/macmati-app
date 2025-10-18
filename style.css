@@ -1,0 +1,266 @@
+/* MacMati - Estilo inspirado en McDonald's */
+:root {
+    --mcdonalds-red: #FF0000;
+    --mcdonalds-yellow: #FFC72C;
+    --mcdonalds-dark-red: #D70015;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray-light: #F8F9FA;
+    --gray: #6C757D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--gray-light);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--mcdonalds-red);
+    color: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    background: var(--mcdonalds-yellow);
+    color: var(--black);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.logo-text {
+    color: var(--mcdonalds-yellow);
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.currency-btn {
+    background: var(--mcdonalds-yellow);
+    color: var(--black);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.currency-btn:hover {
+    background: #FFD700;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 4px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu:hover span {
+    background: var(--mcdonalds-yellow);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--mcdonalds-red);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.burgers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.burger {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.burger:hover {
+    border-color: var(--mcdonalds-yellow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.burger-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.burger-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.burger-content {
+    padding: 1.5rem;
+}
+
+.burger-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mcdonalds-red);
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--mcdonalds-dark-red);
+    background: var(--mcdonalds-yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--mcdonalds-yellow);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--mcdonalds-dark-red);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .burgers {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .burger-content {
+        padding: 1rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
