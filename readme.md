@@ -37,5 +37,5 @@ Luego accedé desde tu navegador a: http://localhost:8080
 ## 👨‍💻 Autor
 
 Matías Goñi
-Proyecto realizado como práctica para la materia Desarrollo de Aplicaciones con Docker.
+Proyecto realizado como práctica para la materia Ingeniería de software
 
